@@ -1,5 +1,8 @@
 // Importa hooks e componentes necessários
 import { useRef } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
@@ -9,9 +12,29 @@ import { Frameworks } from "../components/FrameWorks";
 const About = () => {
   // Referência para o container dos cards flutuantes
   const grid2Container = useRef();
+
+  // Efeito de animação ao rolar a tela
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
-    // Seção principal com espaçamento e id para navegação
-    <section className="c-space section-spacing" id="about">
+    // Seção principal com animação de scroll reveal
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 60 },
+      }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="c-space section-spacing" id="about"
+    >
       {/* Título da seção */}
       <h2 className="text-heading">About Me</h2>
       {/* Grid principal responsiva dividida em 5 áreas temáticas */}
@@ -122,7 +145,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
