@@ -10,7 +10,7 @@ export const myProjects = [
       "Utilizes TypeScript for static typing, improving code safety and developer productivity.",
       "Scalable architecture supporting high concurrency and data throughput.",
     ],
-    href: "",
+    href: "https://github.com/felipe0oLiveira/cidade-conectada",
     logo: "",
     image: "/assets/projects/aplicativo.jpg",
     tags: [
