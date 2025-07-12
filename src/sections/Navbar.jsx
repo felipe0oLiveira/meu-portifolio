@@ -4,22 +4,62 @@ function Navigation() {
   return (
     <ul className="nav-ul">
       <li className="nav-li">
-        <a className="text-neutral-400 transform transition-transform duration-200 hover:scale-110 no-underline hover:text-fuchsia-400" href="#home">
+        <a
+          style={{ transition: "transform 0.2s, color 0.2s", display: "inline-block" }}
+          onMouseOver={e => {
+            e.currentTarget.style.transform = "translateY(-6px)";
+            e.currentTarget.style.color = "#7c3aed";
+          }}
+          onMouseOut={e => {
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.color = "";
+          }}
+        >
           Home
         </a>
       </li>
       <li className="nav-li">
-        <a className="text-neutral-400 transform transition-transform duration-200 hover:scale-110 no-underline hover:text-fuchsia-400" href="#about">
+        <a
+          style={{ transition: "transform 0.2s, color 0.2s", display: "inline-block" }}
+          onMouseOver={e => {
+            e.currentTarget.style.transform = "translateY(-6px)";
+            e.currentTarget.style.color = "#7c3aed";
+          }}
+          onMouseOut={e => {
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.color = "";
+          }}
+        >
           About
         </a>
       </li>
       <li className="nav-li">
-        <a className="text-neutral-400 transform transition-transform duration-200 hover:scale-110 no-underline hover:text-fuchsia-400" href="#projects">
+        <a
+          style={{ transition: "transform 0.2s, color 0.2s", display: "inline-block" }}
+          onMouseOver={e => {
+            e.currentTarget.style.transform = "translateY(-6px)";
+            e.currentTarget.style.color = "#7c3aed";
+          }}
+          onMouseOut={e => {
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.color = "";
+          }}
+        >
           Work
         </a>
       </li>
       <li className="nav-li">
-        <a className="text-neutral-400 transform transition-transform duration-200 hover:scale-110 no-underline hover:text-fuchsia-400" href="#contact">
+        <a
+          style={{ transition: "transform 0.2s, color 0.2s", display: "inline-block" }}
+          onMouseOver={e => {
+            e.currentTarget.style.transform = "translateY(-6px)";
+            e.currentTarget.style.color = "#7c3aed";
+          }}
+          onMouseOut={e => {
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.color = "";
+          }}
+        >
           Contact
         </a>
       </li>
