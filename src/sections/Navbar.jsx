@@ -14,7 +14,7 @@ function Navigation() {
         </a>
       </li>
       <li className="nav-li">
-        <a className="text-neutral-400 transform transition-transform duration-200 hover:scale-110 no-underline hover:text-fuchsia-400" href="#work">
+        <a className="text-neutral-400 transform transition-transform duration-200 hover:scale-110 no-underline hover:text-fuchsia-400" href="#projects">
           Work
         </a>
       </li>
