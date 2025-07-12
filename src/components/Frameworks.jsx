@@ -6,39 +6,46 @@ import { OrbitingCircles } from "./OrbitingCircles";
 // Array de tecnologias principais (círculo externo)
 const mainSkills = [
   "react",
+  "nodejs",
   "typescript",
   "python",
   "java",
-  "csharp",
   "javascript",
-  "html5",
-  "css3",
+  "git",
+  "expo",
 ];
 
 // Array de tecnologias secundárias (círculo interno)
 const secondarySkills = [
-  "git",
-  "tailwindcss",
   "vitejs",
   "wordpress",
-  "auth0",
-  "blazor",
-  "cplusplus",
   "microsoft",
   "sqlite",
+  "csharp",
+  "html5",
+  "csharp",
 ];
 
 export function Frameworks() {
+  // Parâmetros para cálculo dinâmico do raio
+  const iconSize = 30; // Tamanho do ícone em px
+  const minSpacing = 80; // Espaçamento mínimo desejado entre ícones (em px)
+  const iconCount = mainSkills.length;
+  // Circunferência mínima necessária para evitar sobreposição
+  const minCircumference = iconCount * (iconSize + minSpacing);
+  // Raio dinâmico com limites mínimo e máximo
+  const dynamicRadius = Math.min(220, Math.max(100, minCircumference / (2 * Math.PI)));
+
   return (
     <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
       {/* Círculo externo: tecnologias principais */}
-      <OrbitingCircles iconSize={35} radius={130}>
+      <OrbitingCircles iconSize={iconSize} radius={dynamicRadius}>
         {mainSkills.map((skill, index) => (
           <Icon key={index} src={`assets/logos/${skill}.svg`} />
         ))}
       </OrbitingCircles>
       {/* Círculo interno: tecnologias secundárias */}
-      <OrbitingCircles iconSize={30} radius={90} reverse speed={2}>
+      <OrbitingCircles iconSize={20} radius={80} reverse speed={2}>
         {secondarySkills.map((skill, index) => (
           <Icon key={index} src={`assets/logos/${skill}.svg`} />
         ))}
