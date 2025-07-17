@@ -1,7 +1,7 @@
 // Importa componentes e hooks necessários
 import { Canvas, useFrame } from "@react-three/fiber"; // Para renderização 3D
 import HeroText from "../components/HeroText"; // Texto principal da seção
-import ParallaxBackground from "../components/ParallaxBackground"; // Fundo animado
+import ParallaxBackground from "../components/parallaxBackground"; // Fundo animado
 import { Astronaut } from "../components/Astronaut"; // Modelo 3D do astronauta
 import { Float } from "@react-three/drei"; // Efeito de flutuação
 import { useMediaQuery } from "react-responsive"; // Detecta se é mobile
