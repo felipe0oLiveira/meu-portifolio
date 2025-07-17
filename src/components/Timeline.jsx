@@ -1,11 +1,13 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 export const Timeline = ({ data }) => {
   const ref = useRef(null);
   const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (ref.current) {
@@ -24,7 +26,7 @@ export const Timeline = ({ data }) => {
 
   return (
     <div className="c-space">
-      <h2 className="text-heading">My Work Experience</h2>
+      <h2 className="text-heading">{t('timeline.title', 'My Work Experience')}</h2>
       <div ref={ref} className="relative pb-8">
         {data.map((item, index) => (
           <div
