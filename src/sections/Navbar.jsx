@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import { useTranslation } from 'react-i18next';
 function Navigation() {
+  const { t, i18n } = useTranslation();
   return (
     <ul className="nav-ul">
       <li className="nav-li">
         <a
+          href="#"
           style={{ transition: "transform 0.2s, color 0.2s", display: "inline-block" }}
           onMouseOver={e => {
             e.currentTarget.style.transform = "translateY(-6px)";
@@ -15,11 +18,12 @@ function Navigation() {
             e.currentTarget.style.color = "";
           }}
         >
-          Home
+          {t('navbar.home')}
         </a>
       </li>
       <li className="nav-li">
         <a
+          href="#about"
           style={{ transition: "transform 0.2s, color 0.2s", display: "inline-block" }}
           onMouseOver={e => {
             e.currentTarget.style.transform = "translateY(-6px)";
@@ -30,11 +34,12 @@ function Navigation() {
             e.currentTarget.style.color = "";
           }}
         >
-          About
+          {t('navbar.about')}
         </a>
       </li>
       <li className="nav-li">
         <a
+          href="#projects"
           style={{ transition: "transform 0.2s, color 0.2s", display: "inline-block" }}
           onMouseOver={e => {
             e.currentTarget.style.transform = "translateY(-6px)";
@@ -45,11 +50,12 @@ function Navigation() {
             e.currentTarget.style.color = "";
           }}
         >
-          Work
+          {t('navbar.work')}
         </a>
       </li>
       <li className="nav-li">
         <a
+          href="#contact"
           style={{ transition: "transform 0.2s, color 0.2s", display: "inline-block" }}
           onMouseOver={e => {
             e.currentTarget.style.transform = "translateY(-6px)";
@@ -60,8 +66,25 @@ function Navigation() {
             e.currentTarget.style.color = "";
           }}
         >
-          Contact
+          {t('navbar.contact')}
         </a>
+      </li>
+      <li className="nav-li">
+        <button
+          onClick={() => i18n.changeLanguage(i18n.language === 'pt' ? 'en' : 'pt')}
+          style={{ transition: "transform 0.2s, color 0.2s", display: "inline-block", background: 'none', border: 'none', cursor: 'pointer' }}
+          onMouseOver={e => {
+            e.currentTarget.style.transform = "translateY(-6px)";
+            e.currentTarget.style.color = "#7c3aed";
+          }}
+          onMouseOut={e => {
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.color = "";
+          }}
+          className="ml-2 px-2 py-1 text-sm text-neutral-300"
+        >
+          {i18n.language === 'pt' ? 'EN' : 'PT'}
+        </button>
       </li>
     </ul>
   );
