@@ -1,6 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import Marquee from "../components/Marquee";
 import { reviews } from "../constants";
+import { useTranslation } from 'react-i18next';
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
@@ -32,9 +33,10 @@ const ReviewCard = ({ img, name, username, body }) => {
 };
 
 export default function Testimonial() {
+  const { t } = useTranslation();
   return (
     <div className="items-start mt-25 md:mt-35 c-space">
-      <h2 className="text-heading">Hear From My Clients</h2>
+      <h2 className="text-heading">{t('testimonial.title', 'Hear From My Clients')}</h2>
       <div className="relative flex flex-col items-center justify-center w-full mt-12 overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (
