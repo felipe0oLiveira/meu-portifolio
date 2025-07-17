@@ -8,14 +8,35 @@ import { useMediaQuery } from "react-responsive"; // Detecta se é mobile
 import { easing } from "maath"; // Suavização de movimentos
 import { Suspense } from "react"; // Para carregamento assíncrono
 import Loader from "../components/Loader"; // Loader para o 3D
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 // Componente principal da seção Hero
 const Hero = () => {
   // Detecta se está em uma tela mobile
   const isMobile = useMediaQuery({ maxWidth: 853 });
+  // Scroll reveal
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
     // Container principal da seção Hero
-    <section className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space">
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 60 },
+      }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space"
+    >
       {/* Texto de apresentação */}
       <HeroText />
       {/* Fundo animado com efeito parallax */}
@@ -39,7 +60,7 @@ const Hero = () => {
           </Suspense>
         </Canvas>
       </figure>
-    </section>
+    </motion.section>
   );
 };
 
