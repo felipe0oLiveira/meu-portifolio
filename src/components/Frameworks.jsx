@@ -6,6 +6,7 @@ import { OrbitingCircles } from "./OrbitingCircles";
 // Array de tecnologias principais (círculo externo)
 const mainSkills = [
   "react",
+  "postgresql",
   "nodejs",
   "typescript",
   "python",
@@ -28,8 +29,8 @@ const secondarySkills = [
 
 export function Frameworks() {
   // Parâmetros para cálculo dinâmico do raio
-  const iconSize = 30; // Tamanho do ícone em px
-  const minSpacing = 80; // Espaçamento mínimo desejado entre ícones (em px)
+  const iconSize = 40; // Tamanho do ícone em px
+  const minSpacing = 70; // Espaçamento mínimo desejado entre ícones (em px)
   const iconCount = mainSkills.length;
   // Circunferência mínima necessária para evitar sobreposição
   const minCircumference = iconCount * (iconSize + minSpacing);
