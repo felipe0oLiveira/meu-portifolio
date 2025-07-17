@@ -1,5 +1,6 @@
 // Importa o motion para animações
 import { motion } from "motion/react";
+import { useTranslation } from 'react-i18next';
 
 // Componente que exibe os detalhes de um projeto em um modal
 const ProjectDetails = ({
@@ -11,6 +12,7 @@ const ProjectDetails = ({
   href, // Link para o projeto
   closeModal, // Função para fechar o modal
 }) => {
+  const { t } = useTranslation();
   return (
     // Overlay escurecido e desfocado cobrindo toda a tela
     <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
@@ -62,8 +64,7 @@ const ProjectDetails = ({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"
             >
-              View Project{" "}
-              <img src="assets/arrow-up.svg" className="size-4" />
+              {t('projects.viewProject', 'View Project')} <img src="assets/arrow-up.svg" className="size-4" />
             </a>
           </div>
         </div>
