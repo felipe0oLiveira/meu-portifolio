@@ -1,18 +1,10 @@
 export const myProjects = [
   {
     id: 1,
-    title: "Smart Urban Experience App",
-    description:
-      "An innovative mobile app built with React Native for Android and iOS, connecting users to public services, real-time alerts, local events, and community features in one intuitive platform.",
-    subDescription: [
-      "Built with React Native and Expo, ensuring high performance and cross-platform compatibility.",
-      "Secure user authentication and data privacy compliance.",
-      "Utilizes TypeScript for static typing, improving code safety and developer productivity.",
-      "Scalable architecture supporting high concurrency and data throughput.",
-    ],
+    i18nKey: "project1",
     href: "https://github.com/felipe0oLiveira/cidade-conectada",
     logo: "",
-    image: "/assets/projects/aplicativo.jpg",
+    image: "/assets/projects/appmobile.jpg",
     tags: [
       {
         id: 1,
@@ -26,8 +18,8 @@ export const myProjects = [
       },
       {
         id: 3,
-        name: "Sql",
-        path: "/assets/logos/sql.svg",
+        name: "PostgreSQL",
+        path: "/assets/logos/postgresql.svg",
       },
       {
         id: 4,
@@ -36,7 +28,35 @@ export const myProjects = [
       },
     ],
   },
-  
+  {
+    id: 2,
+    i18nKey: "project2",
+    href: "https://github.com/felipe0oLiveira/capsula-tempo.git",
+    logo: "",
+    image: "/assets/projects/capsuletemp.jpg",
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "Node.js",
+        path: "/assets/logos/nodejs.svg",
+      },
+      {
+        id: 3,
+        name: "Typescript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id:4,
+        name: "PostgreSQL",
+        path: "/assets/logos/postgresql.svg",
+      }
+    ],
+  },
 ];
 
 export const mySocials = [
