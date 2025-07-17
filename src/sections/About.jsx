@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
-import { Frameworks } from "../components/FrameWorks";
+import { Frameworks } from "../components/Frameworks";
 import { useTranslation } from 'react-i18next';
 
 // Componente funcional que representa a seção 'Sobre mim'
