@@ -1,0 +1,79 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "work": "Projects",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "greeting": "Hi, I'm Jonathas Felipe",
+    "description": "Software Engineering student and Full Stack Developer. I build modern applications from dynamic interfaces to robust APIs combining development and data analysis for end-to-end solutions.",
+    "codeIsCraft": "CODE IS CRAFT",
+    "card1": "Scalability",
+    "card2": "SOLID",
+    "card3": "Clean Architecture",
+    "card4": "Code Quality",
+    "card5": "SRP",
+    "timezoneTitle": "Time Zone",
+    "timezoneDesc": "I'm based in Mars, and open to remote work worldwide",
+    "cta": "Do you want to start a project together?",
+    "stackTitle": "Teck Stack",
+    "stackDesc": "I have advanced knowledge in several languages, frameworks and tools, which allows me to transform complex problems into elegant solutions."
+  },
+  "hero": {
+    "title": "Hi, I'm Jonathas Felipe",
+    "subtitle": "Developer Full Stack",
+    "subtitle2": "Building Systems from Ideas",
+    "cta": "Code-Driven Solutions",
+    "mobile1": "Developing",
+    "mobile2": "Software Solutions",
+    "words": ["Security", "Modern", "Scalable"]
+  },
+  "projects": {
+    "title": "My Selected Projects",
+    "readMore": "Read More",
+    "viewProject": "View Project",
+    "project1": {
+      "title": "Smart Urban Experience App",
+      "description": "An innovative app that connects citizens to essential public services, real-time alerts, and local opportunities. Simplifying access to health, education, employment, and social programs, all in one place.",
+      "subDescription": [
+        "Built with React Native and Expo, ensuring high performance and cross-platform compatibility.",
+        "Secure user authentication and data privacy compliance.",
+        "Centralizes health, education, employment, and social services for easy access.",
+        "Empowers users to participate with suggestions and stay informed about city updates."
+      ]
+    },
+    "project2": {
+      "title": "Capsule Time Platform",
+      "description": "A web platform to schedule messages for your future self, delivered by email on the date you choose.",
+      "subDescription": [
+        "Developed with React and Node.js/Express for a seamless learning experience.",
+        "Automatic delivery of scheduled messages via email through SendGrid integration.",
+        "Intuitive interface for registration, login, scheduling, editing, and deleting messages.",
+        "Dashboard for complete management of your future messages."
+      ]
+    }
+  },
+  "contact": {
+    "title": "Let's Talk",
+    "subtitle": "Whether you're loking to build a new website, improve your existing platform, or bring a unique project to life, I'm here to help",
+    "fullName": "Full Name",
+    "placeholderName": "John Doe",
+    "email": "Email",
+    "placeholderEmail": "JohnDoe@email.com",
+    "message": "Message",
+    "placeholderMessage": "Share your thoughts...",
+    "send": "Send",
+    "sending": "Sending..."
+  },
+  "testimonial": {
+    "title": "Hear From My Clients"
+  },
+  "timeline": {
+    "title": "My Work Experience"
+  },
+  "footer": {
+    "copyright": "© {{year}} Jonathas Felipe. All rights reserved."
+  }
+} 

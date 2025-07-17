@@ -1,0 +1,79 @@
+{
+  "navbar": {
+    "home": "Início",
+    "about": "Sobre",
+    "work": "Projetos",
+    "contact": "Contato"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "greeting": "Olá, sou Jonathas Felipe",
+    "description": "Estudante de Engenharia de Software e Desenvolvedor Full Stack. Construo aplicações modernas, de interfaces dinâmicas a APIs robustas, unindo desenvolvimento e análise de dados para soluções completas.",
+    "codeIsCraft": "CÓDIGO É ARTE",
+    "card1": "Escalabilidade",
+    "card2": "SOLID",
+    "card3": "Clean Architecture",
+    "card4": "Qualidade de Código",
+    "card5": "SRP",
+    "timezoneTitle": "Fuso Horário",
+    "timezoneDesc": "Estou baseado no Brasil e aberto a trabalho remoto mundialmente",
+    "cta": "Quer iniciar um projeto comigo?",
+    "stackTitle": "Teck Stack",
+    "stackDesc": "Tenho conhecimento avançado em diversas linguagens, frameworks e ferramentas, o que me permite transformar problemas complexos em soluções elegantes."
+  },
+  "hero": {
+    "title": "Olá, sou Jonathas Felipe",
+    "subtitle": "Desenvolvedor Full Stack",
+    "subtitle2": "Construindo sistemas a partir de ideias",
+    "cta": "Soluções orientadas a código",
+    "mobile1": "Desenvolvendo",
+    "mobile2": "Soluções de Software",
+    "words": ["Segurança", "Moderno", "Escalável"]
+  },
+  "projects": {
+    "title": "Projetos Selecionados",
+    "readMore": "Saiba Mais",
+    "viewProject": "Ver Projeto",
+    "project1": {
+      "title": "Smart Urban Experience App",
+      "description": "Um app inovador que conecta cidadãos a serviços públicos essenciais, alertas em tempo real e oportunidades locais. Simplifica o acesso à saúde, educação, emprego e programas sociais, tudo em um só lugar.",
+      "subDescription": [
+        "Construído com React Native e Expo, garantindo alta performance e compatibilidade multiplataforma.",
+        "Autenticação segura de usuários e conformidade com privacidade de dados.",
+        "Centraliza saúde, educação, emprego e serviços sociais para fácil acesso.",
+        "Permite que usuários participem com sugestões e fiquem informados sobre atualizações da cidade."
+      ]
+    },
+    "project2": {
+      "title": "Capsule Time Platform",
+      "description": "Uma plataforma web para agendar mensagens para o seu eu do futuro, entregues por e-mail na data que você escolher.",
+      "subDescription": [
+        "Desenvolvido com React e Node.js/Express para uma experiência de aprendizado fluida.",
+        "Entrega automática de mensagens agendadas por e-mail via integração com SendGrid.",
+        "Interface intuitiva para cadastro, login, agendamento, edição e exclusão de mensagens.",
+        "Dashboard para gerenciamento completo das suas mensagens futuras."
+      ]
+    }
+  },
+  "contact": {
+    "title": "Vamos Conversar",
+    "subtitle": "Seja para criar um novo site, melhorar sua plataforma ou tirar um projeto do papel, estou pronto para ajudar.",
+    "fullName": "Nome Completo",
+    "placeholderName": "João da Silva",
+    "email": "E-mail",
+    "placeholderEmail": "joao@email.com",
+    "message": "Mensagem",
+    "placeholderMessage": "Compartilhe sua ideia...",
+    "send": "Enviar",
+    "sending": "Enviando..."
+  },
+  "testimonial": {
+    "title": "Depoimentos de Clientes"
+  },
+  "timeline": {
+    "title": "Minha Experiência Profissional"
+  },
+  "footer": {
+    "copyright": "© {{year}} Jonathas Felipe. Todos os direitos reservados."
+  }
+} 
