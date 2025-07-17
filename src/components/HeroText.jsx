@@ -1,8 +1,10 @@
 import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
+import { useTranslation } from 'react-i18next';
 
 const HeroText = () => {
-  const words = ["Security", "Modern", "Scalable"];
+  const { t } = useTranslation();
+  const words = t('hero.words', { returnObjects: true }) || ["Security", "Modern", "Scalable"];
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -18,7 +20,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, I'm Jonathas Felipe
+          {t('hero.title', "Hi, I'm Jonathas Felipe")}
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
@@ -28,8 +30,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            Developer Full Stack <br /> Building Systems from Ideas
-
+            {t('hero.subtitle', 'Developer Full Stack')} <br /> {t('hero.subtitle2', 'Building Systems from Ideas')}
           </motion.p>
           <motion.div
             variants={variants}
@@ -49,7 +50,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Code-Driven Solutions
+            {t('hero.cta', 'Code-Driven Solutions')}
           </motion.p>
         </div>
       </div>
@@ -62,7 +63,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, I'm Jonathas Felipe
+          {t('hero.title', "Hi, I'm Jonathas Felipe")}
         </motion.p>
         <div>
           <motion.p
@@ -72,7 +73,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            Developing
+            {t('hero.mobile1', 'Developing')}
           </motion.p>
           <motion.div
             variants={variants}
@@ -92,7 +93,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Software Solutions
+            {t('hero.mobile2', 'Software Solutions')}
           </motion.p>
         </div>
       </div>
