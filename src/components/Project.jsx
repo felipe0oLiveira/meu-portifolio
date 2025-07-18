@@ -14,17 +14,23 @@ const Project = ({
   return (
     <>
       <div
-        className="flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0"
+        className="flex flex-col sm:flex-row items-start sm:items-center justify-between py-6 sm:py-10 space-y-4 sm:space-y-0 px-4 sm:px-0"
         onMouseEnter={() => setPreview(image)}
         onMouseLeave={() => setPreview(null)}
+        onTouchStart={() => setPreview(image)}
+        onTouchEnd={() => setTimeout(() => setPreview(null), 2000)}
       >
-        <div>
-          <p className="text-2xl">{t(`projects.${i18nKey}.title`)}</p>
-          <div className="flex gap-5 mt-2 text-sand">
+
+        
+        <div className="w-full sm:w-auto">
+          <p className="text-xl sm:text-2xl font-semibold">{t(`projects.${i18nKey}.title`)}</p>
+          <div className="flex flex-wrap gap-2 sm:gap-5 mt-2 text-sand text-sm sm:text-base">
             {tags.map((tag) => (
-              <span key={tag.id}>{tag.name}</span>
+              <span key={tag.id} className="px-2 py-1 bg-gray-800 rounded-md">{tag.name}</span>
             ))}
           </div>
+          {/* Dica para mobile */}
+          <p className="text-xs text-gray-500 mt-2 sm:hidden">Toque para ver a imagem do projeto</p>
         </div>
         <button
           onClick={() => setIsHidden(true)}

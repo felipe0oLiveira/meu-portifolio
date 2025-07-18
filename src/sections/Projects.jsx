@@ -16,6 +16,13 @@ const Projects = () => {
     x.set(e.clientX + 20);
     y.set(e.clientY + 20);
   };
+
+  const handleTouchMove = (e) => {
+    if (e.touches[0]) {
+      x.set(e.touches[0].clientX + 20);
+      y.set(e.touches[0].clientY + 20);
+    }
+  };
   const [preview, setPreview] = useState(null);
   // Scroll reveal
   const controls = useAnimation();
@@ -37,10 +44,11 @@ const Projects = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       id="projects"
       onMouseMove={handleMouseMove}
+      onTouchMove={handleTouchMove}
       className="relative c-space"
     >
-      <h2 className="text-heading mt-12">{t('projects.title', 'My Selected Projects')}</h2>
-      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-4 h-[1px] w-full" />
+      <h2 className="text-heading mt-8 sm:mt-12 px-4 sm:px-0">{t('projects.title', 'My Selected Projects')}</h2>
+      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-4 h-[1px] w-full mx-4 sm:mx-0" />
       {myProjects.map((project) => (
         <Project key={project.id} {...project} setPreview={setPreview} />
       ))}
