@@ -35,12 +35,18 @@ const Hero = () => {
         hidden: { opacity: 0, y: 60 },
       }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space"
+      className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space px-4 md:px-0"
     >
       {/* Texto de apresentação */}
       <HeroText />
       {/* Fundo animado com efeito parallax */}
       <ParallaxBackground />
+      {/* Dica para mobile - toque no astronauta */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 md:hidden">
+        <p className="text-xs text-gray-400 bg-black/50 px-3 py-1 rounded-full">
+          Toque no astronauta para zoom
+        </p>
+      </div>
       {/* Área do 3D, ocupa toda a tela */}
       <figure className="absolute inset-0" style={{ width: "100vw", height: "100vh" }}>
         {/* Canvas do React Three Fiber para renderizar o 3D */}
@@ -49,11 +55,11 @@ const Hero = () => {
           <Suspense fallback={<Loader />}>
             {/* Float aplica efeito de flutuação ao astronauta */}
             <Float>
-              {/* Astronauta 3D, com escala e posição ajustadas para mobile ou desktop */}
-              <Astronaut
-                scale={isMobile && 0.23}
-                position={isMobile ? [0.5, -1.5, 0] : [1.8, -1, 0]}
-              />
+                    {/* Astronauta 3D, com escala e posição ajustadas para mobile ou desktop */}
+      <Astronaut
+        scale={isMobile ? 0.18 : 0.3}
+        position={isMobile ? [0.3, -1.2, 0] : [1.8, -1, 0]}
+      />
             </Float>
             {/* Rig faz a câmera seguir o mouse suavemente */}
             <Rig />
