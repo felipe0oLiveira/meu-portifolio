@@ -40,6 +40,7 @@ export function Astronaut(props) {
   });
 
   const [hovered, setHovered] = useState(false);
+  const [touched, setTouched] = useState(false);
   
   // Renderiza o modelo 3D do astronauta
   return (
@@ -48,10 +49,12 @@ export function Astronaut(props) {
       {...props} // Passa todas as props recebidas (position, scale, etc.)
       dispose={null} // Não descarta o modelo da memória
       rotation={[-Math.PI / 2, -0.2, 2.2]} // Rotação inicial do modelo (em radianos)
-      scale={hovered ? (props.scale ? props.scale * 1.2 : 0.36) : (props.scale || 0.3)} // Tamanho do modelo (padrão 0.3)
+      scale={(hovered || touched) ? (props.scale ? props.scale * 1.2 : 0.36) : (props.scale || 0.3)} // Tamanho do modelo (padrão 0.3)
       position={props.position || [1.3, -1, 0]} // Posição inicial (pode ser sobrescrita)
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
+      onPointerDown={() => setTouched(true)}
+      onPointerUp={() => setTimeout(() => setTouched(false), 1000)}
     >
       {/* Estrutura hierárquica do modelo 3D */}
       <group name="Sketchfab_Scene">
