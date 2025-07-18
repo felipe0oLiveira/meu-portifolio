@@ -29,8 +29,7 @@ const Project = ({
               <span key={tag.id} className="px-2 py-1 bg-gray-800 rounded-md">{tag.name}</span>
             ))}
           </div>
-          {/* Dica para mobile */}
-          <p className="text-xs text-gray-500 mt-2 sm:hidden">Toque para ver a imagem do projeto</p>
+
         </div>
         <button
           onClick={() => setIsHidden(true)}

@@ -41,12 +41,7 @@ const Hero = () => {
       <HeroText />
       {/* Fundo animado com efeito parallax */}
       <ParallaxBackground />
-      {/* Dica para mobile - toque no astronauta */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 md:hidden">
-        <p className="text-xs text-gray-400 bg-black/50 px-3 py-1 rounded-full">
-          Toque no astronauta para zoom
-        </p>
-      </div>
+
       {/* Área do 3D, ocupa toda a tela */}
       <figure className="absolute inset-0" style={{ width: "100vw", height: "100vh" }}>
         {/* Canvas do React Three Fiber para renderizar o 3D */}
