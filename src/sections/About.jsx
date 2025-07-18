@@ -130,15 +130,14 @@ const About = () => {
           </div>
         </div>
         {/* Grid 5: Stack de tecnologias e frameworks */}
-        <div className="grid-default-color grid-5 w-full md:w-[unset] relative p-4 sm:p-8 flex flex-col gap-2">
-          <div className="z-10 w-full md:w-[50%]">
-            <p className="headText text-lg sm:text-xl mb-1">{t('about.stackTitle', 'Teck Stack')}</p>
-            <p className="subtext text-sm sm:text-base leading-relaxed">
+        <div className="grid-default-color grid-5">
+          <div className="z-10 w-[50%]">
+            <p className="headText">{t('about.stackTitle', 'Teck Stack')}</p>
+            <p className="subtext">
               {t('about.stackDesc', 'I have advanced knowledge in several languages, frameworks and tools, which allows me to transform complex problems into elegant solutions.')}
             </p>
           </div>
-          {/* Componente que exibe os ícones das tecnologias dominadas */}
-          <div className="relative w-full h-40 sm:h-56 md:absolute md:inset-y-9 md:w-full md:h-full md:scale-125">
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
             <Frameworks />
           </div>
         </div>
