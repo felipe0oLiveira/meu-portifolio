@@ -1,5 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
+import { useTranslation } from 'react-i18next';
 const Alert = ({ type, text }) => {
+  const { t } = useTranslation();
   const alertVarients = {
     hidden: { opacity: 0, y: 50, scale: 0.8 },
     visible: { opacity: 1, y: 0, scale: 1 },
@@ -25,7 +27,7 @@ const Alert = ({ type, text }) => {
               type === "danger" ? "bg-red-500" : "bg-lavender"
             } uppercase px-2 py-1 text-xs font-semibold mr-3`}
           >
-            {type === "danger" ? "Failed" : "Success"}
+            {type === "danger" ? t('alert.failed', 'Failed') : t('alert.success', 'Success')}
           </p>
           <p className="mr-2 text-left">{text}</p>
         </div>

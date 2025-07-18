@@ -34,25 +34,25 @@ const Contact = () => {
 
     try {
       console.log("From submitted:", formData);
+      console.log("Dados enviados para o EmailJS:", formData);
       await emailjs.send(
-        "service_79b0nyj",
-        "template_17us8im",
+        "service_5uzovmx", // Novo Service ID
+        "template_p8h8sp8", // Novo Template ID
         {
-          from_name: formData.name,
-          to_name: "Jonathas Felipe",
-          from_email: formData.email,
-          to_email: "Jonathas.fosilva@icloud.com",
-          message: formData.message,
+          name: formData.name,         // {{name}} no template
+          email: formData.email,       // {{email}} no template
+          message: formData.message,   // {{message}} no template
+          title: t('contact.subject', 'Contato pelo site') // {{title}} dinâmico e traduzido
         },
-        "pn-Bw_mS1_QQdofuV"
+        "dLhSJUylnE7W5N7l9" // Chave Pública correta
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
-      showAlertMessage("success", "You message has been sent!");
+      showAlertMessage("success", t('contact.success', 'Your message has been sent!'));
     } catch (error) {
       setIsLoading(false);
       console.log(error);
-      showAlertMessage("danger", "Somthing went wrong!");
+      showAlertMessage("danger", t('contact.error', 'Something went wrong!'));
     }
   };
   // Scroll reveal

@@ -1,0 +1,11 @@
+{
+  "contact": {
+    "subject": "Contato pelo site",
+    "success": "Sua mensagem foi enviada!",
+    "error": "Algo deu errado!"
+  },
+  "alert": {
+    "failed": "Falhou",
+    "success": "Sucesso"
+  }
+} 

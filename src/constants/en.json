@@ -1,0 +1,11 @@
+{
+  "contact": {
+    "subject": "Contact Us",
+    "success": "Your message has been sent!",
+    "error": "Something went wrong!"
+  },
+  "alert": {
+    "failed": "Failed",
+    "success": "Success"
+  }
+} 
