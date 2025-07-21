@@ -131,7 +131,7 @@ const About = () => {
         </div>
         {/* Grid 5: Stack de tecnologias e frameworks */}
         <div className="grid-default-color grid-5">
-          <div className="z-10 w-[50%]">
+          <div className="z-10 max-w-[70%] md:w-[50%] md:max-w-full pr-8">
             <p className="headText">{t('about.stackTitle', 'Teck Stack')}</p>
             <p className="subtext">
               {t('about.stackDesc', 'I have advanced knowledge in several languages, frameworks and tools, which allows me to transform complex problems into elegant solutions.')}
